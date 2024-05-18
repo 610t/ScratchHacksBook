@@ -11,15 +11,24 @@
 
 本書では、Scratchの少し(?)変わった使い方の紹介をします。
 
-本書では、以下のようなサービスやデバイスをScratchと一緒に利用します。
+本書では、以下のようなサービスやデバイスをScratchと一緒に使用します。
+
+デバイスとしては、以下のようなものを使用します。
 各デバイスの詳しい使い方についても、もうしわけありませんが、本書では説明しません。
 - M5Stack
   - ｽﾀｯｸﾁｬﾝ
 - micro:bit
 - AkaDako
 - hapStak
+- Seeeduino XIAOシリーズ, WioTerminal
+
+また、以下のようなサービスを利用します。
 - IFTTT
-- ChatGPT
+- [not yet]ChatGPT(ChatGPT2Scratch)
+- [not yet]TeachableMachine(TM2Scratch, TMPose2Scratch)
+- [not yet]音声認識(Speech2Scratch)
+- [not yet]画像分類器(ImageClassifier2Scratch)
+- [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
 みなさんのScratchライフが楽しいものになれば筆者としてはうれしいです。
 
