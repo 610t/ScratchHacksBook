@@ -6,7 +6,7 @@
 みなさん、Scratchはご存知ですか?
 ブロックを積み重ねてプログラムを創るScratchは、ひょっとしたら学校や[CoderDojo](https://coderdojo.jp/)などで使ったことがあるかもしれません。
 
-本書では、Sccratchの基礎などについては、一切説明しません。
+本書では、Scratchの基礎などについては、一切説明しません。
 良書がたくさんでているので、それらを参考にしてくだい。
 
 私が初めてScratchと出会ったのは、「Scratch: A Sneak Preview」という論文を読んだことでした。
@@ -93,7 +93,7 @@ M5Stackには、機種によって違いますが、以下のような機能が�
 
 ### M5StackとScratchで遊ぶための参考文献
 - [M5StackとScratchで遊ぶたった3つの冴えたやり方](https://scrapbox.io/M5S/M5Stack%E3%81%A8Scratch%E3%81%A7%E9%81%8A%E3%81%B6%E3%81%9F%E3%81%A3%E3%81%9F3%E3%81%A4%E3%81%AE%E5%86%B4%E3%81%88%E3%81%9F%E3%82%84%E3%82%8A%E6%96%B9):M5StackとScratchで遊ぶためのUIFlow, M5Scratch, M5bitLessの3(+1)つの方法について解説しています。
-- [ScratchとM5Stackで遊ぶ](https://scrapbox.io/M5S/Scratch%E3%81%A8M5Stack%E3%81%A7%E9%81%8A%E3%81%B6):
+- [ScratchとM5Stackで遊ぶ](https://scrapbox.io/M5S/Scratch%E3%81%A8M5Stack%E3%81%A7%E9%81%8A%E3%81%B6):Scratch遠隔センサーについての説明が少し詳しめです。
 
 ### M5bitLess: M5StackでMicrobit Moreを使う
 
