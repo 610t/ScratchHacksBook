@@ -54,6 +54,8 @@ Happy Scratch Hacking!!
 ## 拡張機能最強サーバーStretch3
 [Stretch3](https://stretch3.github.io/)
 
+![Stretch3拡張機能](img/Stretch3-extensions.png)
+
 ### Microbit More
 [Microbit More](https://microbit-more.github.io/)
 
