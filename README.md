@@ -78,4 +78,9 @@ Happy Scratch Hacking!!
 #### M5bitLessを使って遊ぼう
 [ｽﾀｯｸﾁｬﾝ meets Scratch with M5bitLess](https://protopedia.net/prototype/4957)
 
+## Scratchサーバーを自分で立ち上げる
+[Scratchサーバーを手元で立ち上げる](https://scrapbox.io/610t/Scratch%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E6%89%8B%E5%85%83%E3%81%A7%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%8B)
+
+### 拡張機能を追加する
+
 ## おわりに
