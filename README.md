@@ -85,6 +85,16 @@ Scratchには拡張機能という仕組みがあり、その機能を簡単に�
 サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
 これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
 
+Scratchの拡張機能を独自に追加したサーバーも各所で提供されています。
+例えば、以下のようなサーバーがあります。
+本書では、Stretch3を使っていきます。
+- [Stretch3](https://stretch3.github.io/):AI系に強い
+- [Xcratch](https://xcratch.github.io/editor/):	拡張機能動的追加型
+- [blicklife](https://bricklife.com/scratch-gui/):	LEGOに強い
+- [toioDo](https://toio.github.io/toio-visual-programming/beta/):	toio用環境
+- [CodeSkool](https://ide.codeskool.cc/):	なんかいっぱい
+- [つくるっち](https://sohta02.sakura.ne.jp/tukurutch/):	ハードウエア系に強い
+
 ## Stretch3(ストレッチスリー)
 [Stretch3](https://stretch3.github.io/)(ストレッチスリー)は、公式の拡張機能以外に主に日本の開発者たちが開発した拡張機能が利用できるようにしたScratchサーバーです。
 これらの拡張機能は、主に日本の開発者たちが開発しており、オープンソースで公開されています。
