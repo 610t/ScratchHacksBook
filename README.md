@@ -3,6 +3,27 @@
 [Scratchと遊ぼう:NT山城版](https://scrapbox.io/610t/Scratch%E3%81%A8%E9%81%8A%E3%81%BC%E3%81%86:NT%E5%B1%B1%E5%9F%8E%E7%89%88)
 
 ## はじめに
+みなさん、Scratchはご存知ですか?
+ブロックを積み重ねてプログラムを創るScratchは、ひょっとしたら学校や[CoderDojo](https://coderdojo.jp/)などで使ったことがあるかもしれません。
+
+本書では、Sccratchの基礎などについては、一切説明しません。
+良書がたくさんでているので、それらを参考にしてくだい。
+
+本書では、Scratchの少し(?)変わった使い方の紹介をします。
+
+本書では、以下のようなサービスやデバイスをScratchと一緒に利用します。
+各デバイスの詳しい使い方についても、もうしわけありませんが、本書では説明しません。
+- M5Stack
+  - ｽﾀｯｸﾁｬﾝ
+- micro:bit
+- AkaDako
+- hapStak
+- IFTTT
+- ChatGPT
+
+みなさんのScratchライフが楽しいものになれば筆者としてはうれしいです。
+
+Happy Scratch Hacking!!
 
 ## Scratchってなぁに?
 [Scratch](https://scratch.mit.edu/)
