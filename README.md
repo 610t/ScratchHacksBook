@@ -72,6 +72,8 @@ Happy Scratch Hacking!!
 [M5Stack](https://m5stack.com/)
 
 ### M5Stackってなぁに?
+![M5Stackファミリー](img/M5Stack-family.jpg)
+
 M5Stackは、色々な機能が一つになった、とても便利なマイコンデバイスです。
 
 M5Stackには、機種によって違いますが、以下のような機能があります。
