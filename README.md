@@ -114,10 +114,20 @@ Stretch3の拡張機能には、以下の図のようなものがあります。
 - [not yet]画像分類器(ImageClassifier2Scratch)
 - [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
-### Microbit More
-[Microbit More](https://microbit-more.github.io/)
+### Microbit More拡張機能
+[Microbit More](https://microbit-more.github.io/)は、Scratchから[micro:bit](https://microbit.org/)のフル機能を利用できるようにした拡張機能です。
+「公式にも拡張機能があるのでは?」と思うかもしれませんが、こちらはかなり機能が限定されており、私はMicrobit Moreを利用することをおすすめします。
+以下のような違いがあります。
 
-[micro:bit](https://microbit.org/)
+||micro:bit拡張機能|Micorbit More|
+|---|---|---|
+|ボタン|o|o|
+|LED表示|o|o|
+|簡易な状態による操作|o|o|
+|加速度の利用|x|o|
+|ピンの利用|限定的|完全に利用可能|
+
+Microbit Moreはmicro:bitでの利用の他に、拙作のM5bitLessを使って、M5Stackシリーズのマイコンで利用することも可能です。
 
 ### AkaDako
 [AkaDako](https://akadako.com/)
