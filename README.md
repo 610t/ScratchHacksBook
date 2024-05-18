@@ -32,15 +32,16 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 - micro:bit
 - AkaDako
 - hapStak
+- LEGO
 - Seeeduino XIAOシリーズ, WioTerminal
 
 また、以下のようなサービスを利用します。
 - IFTTT
-- [not yet]ChatGPT(ChatGPT2Scratch)
-- [not yet]TeachableMachine(TM2Scratch, TMPose2Scratch)
-- [not yet]音声認識(Speech2Scratch)
-- [not yet]画像分類器(ImageClassifier2Scratch)
-- [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
+- [not yet]ChatGPT
+- [not yet]TeachableMachine
+- [not yet]音声認識
+- [not yet]画像分類器
+- [not yet]ポーズ認識
 
 みなさんのScratchライフが楽しいものになれば筆者としてはうれしいです。
 
@@ -84,10 +85,24 @@ Scratchには拡張機能という仕組みがあり、その機能を簡単に�
 サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
 これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
 
-## 拡張機能最強サーバーStretch3
-[Stretch3](https://stretch3.github.io/)
+## Stretch3(ストレッチスリー)
+[Stretch3](https://stretch3.github.io/)(ストレッチスリー)は、公式の拡張機能以外に主に日本の開発者たちが開発した拡張機能が利用できるようにしたScratchサーバーです。
+これらの拡張機能は、主に日本の開発者たちが開発しており、オープンソースで公開されています。
+
+Stretch3の拡張機能には、以下の図のようなものがあります。
 
 ![Stretch3拡張機能](img/Stretch3-extensions.png)
+
+今回、本書で解説しようと考えている拡張機能は、以下のとおりです。
+- Microbit More
+- AkaDako
+- LEGO DUPLO Train
+- IFTTT
+- [not yet]ChatGPT(ChatGPT2Scratch)
+- [not yet]TeachableMachine(TM2Scratch, TMPose2Scratch)
+- [not yet]音声認識(Speech2Scratch)
+- [not yet]画像分類器(ImageClassifier2Scratch)
+- [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
 ### Microbit More
 [Microbit More](https://microbit-more.github.io/)
