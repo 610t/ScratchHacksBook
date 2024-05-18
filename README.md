@@ -129,6 +129,8 @@ M5Stackには、機種によって違いますが、以下のような機能が�
   - [M5Stack Christmas with M5Scratch](https://www.hackster.io/610t/m5stack-christmas-with-m5scratch-1055a2):これもゲームを作ってみた例です。すみません英語です。
 
 ## スーパーかわいいロボットｽﾀｯｸﾁｬﾝ
+![ｽﾀｯｸﾁｬﾝ & Scratch](img/Stack-chan.png)
+
 [スタックチャン（Stack-chan）](https://protopedia.net/prototype/2345)は、ししかわさんが開発、公開している手乗りサイズのｽｰﾊﾟｰｶﾜｲｲコミュニケーションロボットです。
 ｽﾀｯｸﾁｬﾝはオープンソースで開発されており、ハードウエア(サーボのドライバーや体(筐体)の3Dデザインなど)もソフトウエア(AI用やBluetoothスピーカ版など)もオープンなものがたくさん存在します。
 
