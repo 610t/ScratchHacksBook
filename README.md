@@ -70,6 +70,26 @@ Happy Scratch Hacking!!
 ## M5Stackと遊ぼう!!
 [M5Stack](https://m5stack.com/)
 
+### M5Stackってなぁに?
+M5Stackは、色々な機能が一つになった、とても便利なマイコンデバイスです。
+
+M5Stackには、機種によって違いますが、以下のような機能があります。
+各機種のリンクは、日本の正規代理店のひとつであるスイッチサイエンスの販売ページになっています。
+- CPU:		ESP32C, ESP32S, K210など
+- ディスプレイ:320x240TFT([Core](https://www.switch-science.com/products/9010),[Core2](https://www.switch-science.com/products/6530),[CoreS3](https://www.switch-science.com/products/8960)), 80×160TFT(M5StickC), 135x240TFT([C Plus](https://www.switch-science.com/products/6470),[C Plus2](https://www.switch-science.com/products/9350)), 240 x 135TFT([Cardputer](https://www.switch-science.com/products/9277)), 5x5フルカラーLED([ATOM Matrix](https://www.switch-science.com/products/6260))
+- バッテリー:	150mAh(Core), 390mAh(Core2), 500 mAh(CoreS3), 80or95mAh(C), 120mAh(C Plus), 120 mAh+1400 mAh(Cardputer)
+- ネットワーク:Wi-Fi(2.4G) + BLE
+- センサー:	加速度センサー、ジャイロ、ボタンスイッチ、温度センサーなど
+- オーディオ:	マイク, スピーカー
+- カメラ:		30万画素
+- その他I/O:	Grove A(I2C), B(A/D,GPIO), C(UART), M-BUSなど
+- 付属品:		キーボード、腕時計バンド、LEGOマウント
+
+初めて買うときの私のおすすめは、[M5StickC Plus2 ウォッチアクセサリキット](https://www.switch-science.com/products/9420)です。
+腕に巻いて遊べます!!
+
+ただ、後で説明するｽﾀｯｸﾁｬﾝで遊びたい場合は、現状ではCore2シリーズ(Core2, [Core2aws](https://www.switch-science.com/products/6784))を買っておいた方が良いです。
+
 ### M5bitLess: M5StackでMicrobit Moreを使う
 [M5bitLess: M5Stack x Scratch3 = So Fun!!](https://protopedia.net/prototype/2395)
 
