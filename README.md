@@ -201,13 +201,55 @@ M5Stackには、機種によって違いますが、以下のような機能が�
 - [いろんなボードからScratchを使おう](https://scrapbox.io/M5S/%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%BC%E3%83%89%E3%81%8B%E3%82%89Scratch%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86):色々なボードでScratchを使っている例です。
 
 ### Scratch1.4 遠隔センサープロトコル
-#### Scratch 1.4
-[Scratch 1.4](https://scratch.mit.edu/scratch_1.4)
 
-##### 遠隔センサープロトコル
-[Remote Sensors Protocol](https://en.scratch-wiki.info/wiki/Remote_Sensors_Protocol)
+#### Scratch 1.4
+[Scratch 1.4](https://scratch.mit.edu/scratch_1.4)は、最初に公開されたバージョンのScratchです。
+アプリケーションとして提供されており、インターネット接続がないオフラインでも利用可能です。
+Smalltalk([Squeak](https://squeak.org/))で記述されています。
+
+Scratch 1.4はいまでもよく利用されています。
+例えば、Raspberry Piの標準OSには、Scratch 1.4が含まれています。
+
+##### 遠隔センサープロトコル(RSP)
+Scratch遠隔センサープロトコル([Remote Sensors Protocol](https://en.scratch-wiki.info/wiki/Remote_Sensors_Protocol):以下RSP)は、Scratchとネットワークでつながった外部の何かと情報をやり取りするための仕組みです。
+Scratch同士の通信も可能になっています。
+基本的にはTCP/IP 42001を利用してやり取りしますが、UDP/IP 42001も利用可能です。
+
+RSPを利用するためには、少し準備が必要です。
+Scratch側で遠隔センサーを有効にする必要があります。
+そのためには以下の図のように、調べる->"スライダセンサーの値"を右クリック->"遠隔センサー接続を有効にする"を選びます。
+
+![RSPを有効にする。](img/RSP-enable.png)
+
+RSPをスマートフォンから利用するためのアプリケーションもいくつか提供されています。
+これらのアプリケーションでは、スマートフォン内蔵の加速度センサーなどの情報を、Scratchから利用できるようになります。
+- Android
+  - [Physical Sensors for Scratch](https://play.google.com/store/apps/details?id=com.moyashi_koubou.androidsensor4scratch)
+  - [Scratch Sensor](https://play.google.com/store/apps/details?id=com.emant.scroid)
+- iOS:		軽く探した範囲では見つかりませんでした。情報求む!!
+
+![Android Physical Sensors for Scratch](img/PhisicalSensors4Scratch.png)
+
+RSPはテキストベースのプロトコル、コマンドが2種類だけ提供されています。
+メッセージのやり取りを行う`broadcast "メッセージ"`と
+変数のやり取りを行う`sensor-update "変数名" "値" ...`
+です。
+
+![RSP command](img/En_M5Scratch.png)
+
+#### Scratch x M5Stack UIFlow
+[UIFlow](https://flow.m5stack.com/)はM5Stackの標準開発環境のひとつです。
+様々なM5Stack純正のGroveデバイス類が簡単に利用できるようになっています。
+
+提供されている機能の中にUDPによる通信があるため、RSPを利用することが可能になります。
+
+例えば、以下の例では、M5Stackの加速度センサーの値に応じて猫を動かすことと、ボタンスイッチの値をM5StackからScratchへ伝えることができています。
+ただ、なぜかScratchからM5Stack方向の通信はうまくできないようです。
+
+![Scratch RSP x UIFlow](img/ScratchRSP-UIFlow.png)
 
 #### M5Scratch = Scratch x M5Stack
+![M5Scratch System](img/En_System.png)
 
 #### 参考文献
 - [M5Scratch: M5Stack x Scratch1.4](https://protopedia.net/prototype/5188):システム全体の説明です。すみません英語です。
