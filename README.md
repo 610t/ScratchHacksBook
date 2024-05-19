@@ -32,9 +32,81 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 - micro:bit
 - AkaDako
 - hapStak
+- LEGO
 - Seeeduino XIAOシリーズ, WioTerminal
 
 また、以下のようなサービスを利用します。
+- IFTTT
+- [not yet]ChatGPT
+- [not yet]TeachableMachine
+- [not yet]音声認識
+- [not yet]画像分類器
+- [not yet]ポーズ認識
+
+みなさんのScratchライフが楽しいものになれば筆者としてはうれしいです。
+
+Happy Scratch Hacking!!
+
+## Scratchってなぁに?
+[Scratch](https://scratch.mit.edu/)はMITメディアラボが開発したプログラミング言語です。
+プログラムは、ブロックを積み上げて創っていきます。
+しばしば、小学校などのようなプログラミング学習の入門用の教育用途で利用されています。
+作者たちのスローガンは、「全ての年齢の子どもたちに!!」であり、大人の利用も視野に入っています。
+
+Scratchは教育用途という先入観があると思いますが、作者たちは、以下のような多様な用途に利用できるように設計をしています。
+- 低い床:		はじめやすく
+- 高い天井:	高度なこともでき
+- 広い壁:		いろいろなものを作れる
+
+個人的には、少し変わった変態言語と感じています。
+詳しくは説明しませんが、例えば以下のような特徴があります。
+- 並列実行: プログラムはごく自然に並列に実行するように書かれます。
+- イベントベース: プログラムは、イベントの送受信を使って書かれます。
+- オブジェクトベース: 全てはオブジェクトです。
+  - スプライト: 表示されているキャラクターはオブジェクトです。
+  - クローン: スプライトは複製を作ることができ、これも自律的に動かせます。
+
+公式Scratchサーバーは https://scratch.mit.edu/ で公開されています。
+
+Scratchのサーバーはオープンソースで公開されいます。
+そのため、比較的簡単に自分好みのサーバを創ることもできるようになっています。
+これを自分の手元で立ち上げる方法も本書では解説します。
+
+### Scratch拡張機能
+Scratchには拡張機能という仕組みがあり、その機能を簡単に追加していくことができるようになっています。
+公式のScratchサーバーで利用できる拡張機能は以下の図のようなものです。
+
+![Scratch公式拡張機能](img/Scratch-extensions.png)
+
+一見基本的にみえる「ペン」や「音楽」などの他に、文字列を翻訳する「翻訳」や文字列を音声合成して読み上げる「音声合成」、ビデオ入力から動きを検知する「ビデオモーションセンサー」などがあります。
+ハードウエアとしては、「micro:bit」やLEGO(MINDSTORMS EV3, BOOST, WeDo)などが利用可能になっています。
+
+拡張機能は、ユーザーから見ると他のScratchの基本的な機能と変わりなく利用可能です。
+サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
+これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
+
+Scratchの拡張機能を独自に追加したサーバーも各所で提供されています。
+例えば、以下のようなサーバーがあります。
+本書では、Stretch3を使っていきます。
+- [Stretch3](https://stretch3.github.io/):AI系に強い
+- [Xcratch](https://xcratch.github.io/editor/):	拡張機能動的追加型
+- [blicklife](https://bricklife.com/scratch-gui/):	LEGOに強い
+- [toioDo](https://toio.github.io/toio-visual-programming/beta/):	toio用環境
+- [CodeSkool](https://ide.codeskool.cc/):	なんかいっぱい
+- [つくるっち](https://sohta02.sakura.ne.jp/tukurutch/):	ハードウエア系に強い
+
+## Stretch3(ストレッチスリー)
+[Stretch3](https://stretch3.github.io/)(ストレッチスリー)は、公式の拡張機能以外に主に日本の開発者たちが開発した拡張機能が利用できるようにしたScratchサーバーです。
+これらの拡張機能は、主に日本の開発者たちが開発しており、オープンソースで公開されています。
+
+Stretch3の拡張機能には、以下の図のようなものがあります。
+
+![Stretch3拡張機能](img/Stretch3-extensions.png)
+
+今回、本書で解説しようと考えている拡張機能は、以下のとおりです。
+- Microbit More
+- AkaDako
+- LEGO DUPLO Train
 - IFTTT
 - [not yet]ChatGPT(ChatGPT2Scratch)
 - [not yet]TeachableMachine(TM2Scratch, TMPose2Scratch)
@@ -42,24 +114,20 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 - [not yet]画像分類器(ImageClassifier2Scratch)
 - [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
-みなさんのScratchライフが楽しいものになれば筆者としてはうれしいです。
+### Microbit More拡張機能
+[Microbit More](https://microbit-more.github.io/)は、Scratchから[micro:bit](https://microbit.org/)のフル機能を利用できるようにした拡張機能です。
+「公式にも拡張機能があるのでは?」と思うかもしれませんが、こちらはかなり機能が限定されており、私はMicrobit Moreを利用することをおすすめします。
+以下のような違いがあります。
 
-Happy Scratch Hacking!!
+||micro:bit拡張機能|Micorbit More|
+|---|---|---|
+|ボタン|o|o|
+|LED表示|o|o|
+|簡易な状態による操作|o|o|
+|加速度の利用|x|o|
+|ピンの利用|限定的|完全に利用可能|
 
-## Scratchってなぁに?
-[Scratch](https://scratch.mit.edu/)
-
-## Scratch拡張機能
-
-## 拡張機能最強サーバーStretch3
-[Stretch3](https://stretch3.github.io/)
-
-![Stretch3拡張機能](img/Stretch3-extensions.png)
-
-### Microbit More
-[Microbit More](https://microbit-more.github.io/)
-
-[micro:bit](https://microbit.org/)
+Microbit Moreはmicro:bitでの利用の他に、拙作のM5bitLessを使って、M5Stackシリーズのマイコンで利用することも可能です。
 
 ### AkaDako
 [AkaDako](https://akadako.com/)
