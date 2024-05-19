@@ -288,8 +288,133 @@ AIｽﾀｯｸﾁｬﾝの作成方法に関しては、動画「[知識ゼロ�
 [ｽﾀｯｸﾁｬﾝ meets Scratch with M5bitLess](https://protopedia.net/prototype/4957)
 
 ## Scratchサーバーを自分で立ち上げる
+Scratchのサーバーはオープンソースになっており、誰でも手元で立ち上げることが可能です。
+以下では、自分で立ち上げるサーバーのことを、オレオレサーバーと呼びます。
+
+本章では、実際にオレオレサーバーを立ち上げる手順を説明していきます。
+
+具体的に手順に関しては、適宜[大人のためのScratch Scratch を改造しよう](https://otona-scratch.champierre.com/books/1/posts)の
+[2. Scratch 3を自分のパソコンで動かしてみよう](https://otona-scratch.champierre.com/books/1/posts/3)(Windowsでの手順)を参照してください。
+
+事前に必要な準備は以下のとおりです。
+- `git`コマンドのインストール
+- Node.jsの環境構築
+
+> [!NOTE]
+> Ubuntuでの手順は、以下のようになります。
+> ```shell
+> $ sudo apt install -y git nodejs npm
+> ```
+
+> [!NOTE]
+> FreeBSDでの手順は、以下のようになります。
+> ```shell
+> $ sudo pkg install -y git npm
+> ```
+
+追加拡張機能の無いScratch3サーバーを準備する手順は以下のとおりです。
+```shell
+# Scratchサーバーのリポジトリを取得する。
+$ git clone --depth 1 https://github.com/LLK/scratch-gui
+$ cd scratch-gui
+# 実行準備を行う。
+$ npm install
+```
+
+サーバーを起動するには、以下のようにコマンドを実行します。
+```shell
+$ npm start
+```
+
+これで、 http://localhost:8601/ にアクセスすると、いつものようなScratchの画面が表示されるはずです。
+
+更に進んだScratch3サーバーを立ち上げる方法として、githubを使ってオレオレScratchサーバーを立ち上げることも可能です。
+具体的には、[GitHub Actions で独自 Scratch を動かす](https://blog.champierre.com/1282)を参照してください。
 
 ### 拡張機能を追加する
+オレオレサーバーに公式でない拡張機能を追加することも可能です。
+
+Stretch3サーバーで実際にどのようにインストールされているかは、https://github.com/stretch3/stretch3.github.io/blob/source/.github/workflows/deploy.yml 　を参照してください。
+
+Microbit Moreを追加するためには、以下のようにします。
+このコマンドは、`scratch-gui`で行ってください。
+```shell
+# リポジトリからソースを取得する。
+$ git clone --depth 1 https://github.com/microbit-more/mbit-more-v2
+# おまじない
+$ ln -s mbit-more-v2 microbitMore
+# インストールコマンド
+$ sh ./microbitMore/install-stretch3.sh
+```
+
+AkaDako拡張機能をインストールするためには、以下のようにします。
+```shell
+# AkaDako
+$ git clone --depth 1 https://github.com/tfabworks/xcx-g2s
+$ sh ./xcx-g2s/scripts/stretch3-install.sh
+```
+
+### 他のPCからこのサーバの全機能を利用する
+![Scratch with SSL](https://gyazo.com/7a4387b1d112620ac50502f7b819ffb0.png)
+
+仕様上、ブラウザでは、カメラやマイクを使う機能やWebUSBやWebBluetoothなどを使う拡張機能は、`localhost`ではない外部からはhttp経由ではなくhttps経由でしか使えないようになっています
+([Chrome 47 WebRTC: Media Recording, Secure Origins and Proxy Handling](https://developer.chrome.com/blog/chrome-47-webrtc/))。
+
+したがって、httpサーバーを自分で用意して、httpsが使えるように設定する必要があります。
+		
+このためには、`nginx`や`apache`などのWebサーバーを用意して、httpsが使えるようにする、つまりSSLが使えるように設定する必要があります。
+SSLを利用するためには証明書が必要ですが、[Let's encrypt](https://letsencrypt.org/ja/)などを使って正規の証明書を使う方法や自己署名証明書(通称、オレオレ証明書)を使う方法などがあります。
+
+その後、SSLでの接続をScratchサーバーにProxyするための設定を行うことになります。
+
+`nginx`を利用する場合の手順は、以下の通りになります。
+
+自己署名証明書(オレオレ証明書)を作成します。
+```shell
+# オレオレ証明書を保存するディレクトリを作成する
+$ mkdir -p /usr/local/etc/nginx/ssl
+$ cd /usr/local/etc/nginx/ssl
+# キーの生成
+$ sudo openssl genrsa -out server.key 2048
+$ sudo openssl req -new -key server.key -out server.csr
+####  (適切に項目を埋める)
+$ sudo openssl x509 -days 3650 -req -signkey server.key -in server.csr -out server.crt
+```
+
+`nginx`の設定ファイルを調整します。
+以下の例では、10443ポートでSSLを受けて、Scratchサーバーデフォルトの8601にproxyするように設定しています。
+
+```conf
+worker_processes  1;
+events {
+  worker_connections  1024;
+}
+http {
+  include       mime.types;
+  default_type  application/octet-stream;
+  sendfile        on;
+  keepalive_timeout  65;
+  server {
+    listen       10443 ssl;
+    server_name  localhost;
+    ssl_certificate
+    /usr/local/etc/nginx/ssl/server.crt;
+    ssl_certificate_key  /usr/local/etc/nginx/ssl/server.key;
+    location / {
+      proxy_pass http://localhost:8601/;
+    }
+  }
+  include servers/*;
+}
+```
+
+ここで、`nginx`を起動します。
+設定がうまく行っていれば、 https://localhost:10443/ でScratchにアクセスできるようになっているはずです。
+
+> [!NOTE]
+> このサーバにアクセスした時、Chromeブラウザで警告が出た場合、以下のどちらかでアクセス可能になります。
+> - "詳細情報"ボタンを押して、出てきた"<host>にアクセスする（安全ではありません）" リンクを押す
+> - "thisisunsafe"と入力する
 
 ### 参考文献
 - [Scratchサーバーを手元で立ち上げる](https://scrapbox.io/610t/Scratch%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E6%89%8B%E5%85%83%E3%81%A7%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%8B):Scratchサーバーを自分で作るための概略説明です。
