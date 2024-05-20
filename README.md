@@ -191,6 +191,25 @@ M5Stackには、機種によって違いますが、以下のような機能が�
 - [ScratchとM5Stackで遊ぶ](https://scrapbox.io/M5S/Scratch%E3%81%A8M5Stack%E3%81%A7%E9%81%8A%E3%81%B6):Scratch遠隔センサーについての説明が少し詳しめです。
 
 ## M5bitLess: M5StackでMicrobit Moreを使う
+![M5bitLess System](img/M5bitLess-System.png)
+
+[M5bitLess](https://github.com/610t/M5bit-less)は、M5StackでStretch3+Microbit Moreの使うための拙作のプログラムです。
+M5Stackがあたかもmicro:bitのようにふるまうことことで、動作しています。
+M5bitLessは、Arduinoプログラムです。
+
+M5bitLessは、M5Burnerからも焼くことができるため、開発環境がない場合でも使えるようになっています。
+
+![M5BurnerからM5bitLessを使う](img/M5Burner.png)
+
+M5bitLessを拡張機能から追加すると、以下の画面のようにM5Stackに接続する設定が表示されます。
+M5Stackに表示されたのと同じIDを選択してください。
+
+![M5bitLessの初期画面](img/M5bitLess-init.jpg)
+
+あとは、普通のScratchのように利用することができます。
+ただし、以下のように、Microbit Moreの全ての機能が実装されているわけではないので、注意してください。
+
+![M5bitLessの対応ブロック](img/M5bitLess-blocks.png)
 
 ### 参考文献
 - [M5bitLess: M5Stack x Scratch3 = So Fun!!](https://protopedia.net/prototype/2395):M5bitLessのシステム全体を知るのに良いと思います。
@@ -200,7 +219,6 @@ M5Stackには、機種によって違いますが、以下のような機能が�
   - [M5StackとScratchとhapStakでスポーツの秋に挑戦!!](https://protopedia.net/prototype/2549):M5bitLessを使って、運動するゲームを作ってみました。
 
 ### その他のボードで*bitLess系列を使う
-
 - Seeeduino XIAOシリーズ (ESP32C3, nRF52480(Sense)):  [XIAO32bitLess](https://github.com/610t/XIAO32bitLess)
 - Seeeduino WioTerminal:  M5bitLessに対応コードあり
 - IoT Algyan [XIAOGYAN](https://github.com/algyan/XIAOGYAN):  [XIAOGYANbitLess](https://github.com/610t/XIAOGYANbitLess)
