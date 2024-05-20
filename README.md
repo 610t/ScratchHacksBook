@@ -22,7 +22,7 @@
   - [M5StackとScratchで遊ぶための参考文献](#m5stackとscratchで遊ぶための参考文献)
   - [M5bitLess: M5StackでMicrobit Moreを使う](#m5bitless-m5stackでmicrobit-moreを使う)
     - [参考文献](#参考文献-1)
-    - [その他のボードで\*bitLess系列を使う](#その他のボードでbitless系列を使う)
+    - [その他のマイコンボードで\*bitLess系列を使う](#その他のマイコンボードでbitless系列を使う)
       - [参考文献](#参考文献-2)
 - [Scratch1.4 遠隔センサープロトコル](#scratch14-遠隔センサープロトコル)
   - [Scratch 1.4](#scratch-14)
@@ -251,10 +251,16 @@ M5Stackに表示されたのと同じIDを選択してください。
 - デモ類
   - [M5StackとScratchとhapStakでスポーツの秋に挑戦!!](https://protopedia.net/prototype/2549):M5bitLessを使って、運動するゲームを作ってみました。
 
-### その他のボードで*bitLess系列を使う
+### その他のマイコンボードで*bitLess系列を使う
+M5Stack以外にも、色々なマイコンボードでStretch3+Microbit Moreの構成でScratchを利用することができます。
 - Seeeduino XIAOシリーズ (ESP32C3, nRF52480(Sense)):  [XIAO32bitLess](https://github.com/610t/XIAO32bitLess)
 - Seeeduino WioTerminal:  M5bitLessに対応コードあり
 - IoT Algyan [XIAOGYAN](https://github.com/algyan/XIAOGYAN):  [XIAOGYANbitLess](https://github.com/610t/XIAOGYANbitLess)
+
+SeeedのXIAOファミリーは、以下のようなボードになります。
+とても小さくて色々なものに組み込みやすく、マイコンの種類も色々あって、使い勝手は大変良いです。
+
+![XIAOファミリー](img/XIAO-family.jpg)
 
 #### 参考文献
 - [いろんなボードからScratchを使おう](https://scrapbox.io/M5S/%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%BC%E3%83%89%E3%81%8B%E3%82%89Scratch%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86):色々なボードでScratchを使っている例です。
