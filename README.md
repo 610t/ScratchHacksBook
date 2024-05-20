@@ -6,40 +6,9 @@
 
 # Scratch Hacks!!
 
-[Scratchと遊ぼう:NT山城版](https://scrapbox.io/610t/Scratch%E3%81%A8%E9%81%8A%E3%81%BC%E3%81%86:NT%E5%B1%B1%E5%9F%8E%E7%89%88)
+初版
 
-- [Scratch Hacks!!](#scratch-hacks)
-- [はじめに](#はじめに)
-- [Scratchってなぁに?](#scratchってなぁに)
-  - [Scratch拡張機能](#scratch拡張機能)
-- [Stretch3(ストレッチスリー)](#stretch3ストレッチスリー)
-  - [Microbit More拡張機能](#microbit-more拡張機能)
-  - [AkaDako拡張機能](#akadako拡張機能)
-    - [参考文献](#参考文献)
-  - [IFTTT](#ifttt)
-- [M5Stackと遊ぼう!!](#m5stackと遊ぼう)
-  - [M5Stackってなぁに?](#m5stackってなぁに)
-  - [M5StackとScratchで遊ぶための参考文献](#m5stackとscratchで遊ぶための参考文献)
-  - [M5bitLess: M5StackでMicrobit Moreを使う](#m5bitless-m5stackでmicrobit-moreを使う)
-    - [参考文献](#参考文献-1)
-    - [その他のマイコンボードで\*bitLess系列を使う](#その他のマイコンボードでbitless系列を使う)
-      - [参考文献](#参考文献-2)
-- [Scratch1.4 遠隔センサープロトコル](#scratch14-遠隔センサープロトコル)
-  - [Scratch 1.4](#scratch-14)
-    - [遠隔センサープロトコル(RSP)](#遠隔センサープロトコルrsp)
-  - [Scratch x M5Stack UIFlow](#scratch-x-m5stack-uiflow)
-  - [M5Scratch = Scratch x M5Stack](#m5scratch--scratch-x-m5stack)
-  - [参考文献](#参考文献-3)
-- [スーパーかわいいロボットｽﾀｯｸﾁｬﾝ](#スーパーかわいいロボットｽﾀｯｸﾁｬﾝ)
-  - [音声入出力を使って遊ぼう](#音声入出力を使って遊ぼう)
-    - [参考文献](#参考文献-4)
-  - [M5bitLessを使って遊ぼう](#m5bitlessを使って遊ぼう)
-- [Scratchサーバーを自分で立ち上げる](#scratchサーバーを自分で立ち上げる)
-  - [拡張機能を追加する](#拡張機能を追加する)
-  - [他のPCからこのサーバの全機能を利用する](#他のpcからこのサーバの全機能を利用する)
-  - [参考文献](#参考文献-5)
-- [おわりに](#おわりに)
-
+筆者:武藤武士 (X:@610t)
 
 # はじめに
 みなさん、Scratchはご存知ですか?
@@ -86,6 +55,46 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 
 Happy Scratch Hacking!!
 
+# 目次
+- [Scratch Hacks!!](#scratch-hacks)
+- [はじめに](#はじめに)
+- [目次](#目次)
+- [Scratchってなぁに?](#scratchってなぁに)
+  - [Scratch拡張機能](#scratch拡張機能)
+    - [独自の拡張機能を追加したオレオレScratchサーバー](#独自の拡張機能を追加したオレオレscratchサーバー)
+- [Stretch3(ストレッチスリー)](#stretch3ストレッチスリー)
+  - [Microbit More拡張機能](#microbit-more拡張機能)
+  - [AkaDako拡張機能](#akadako拡張機能)
+    - [参考文献](#参考文献)
+  - [音声認識拡張機能](#音声認識拡張機能)
+  - [IFTTT拡張機能](#ifttt拡張機能)
+  - [ChatGPT拡張機能](#chatgpt拡張機能)
+  - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
+  - [画像分類器拡張機能](#画像分類器拡張機能)
+  - [ポーズ認識に関する拡張機能](#ポーズ認識に関する拡張機能)
+- [M5Stackと遊ぼう!!](#m5stackと遊ぼう)
+  - [M5Stackってなぁに?](#m5stackってなぁに)
+  - [M5StackとScratchで遊ぶための参考文献](#m5stackとscratchで遊ぶための参考文献)
+- [M5bitLess = M5Stack x Scratch:M5StackでMicrobit Moreを使う](#m5bitless--m5stack-x-scratchm5stackでmicrobit-moreを使う)
+  - [参考文献](#参考文献-1)
+  - [その他のマイコンボードで\*bitLess系列を使う](#その他のマイコンボードでbitless系列を使う)
+      - [参考文献](#参考文献-2)
+- [Scratch1.4と遠隔センサープロトコル](#scratch14と遠隔センサープロトコル)
+  - [Scratch 1.4](#scratch-14)
+  - [遠隔センサープロトコル(RSP)](#遠隔センサープロトコルrsp)
+  - [Scratch x M5Stack UIFlow](#scratch-x-m5stack-uiflow)
+- [M5Scratch = Scratch x M5Stack:M5StackでScratch遠隔センサーを使う](#m5scratch--scratch-x-m5stackm5stackでscratch遠隔センサーを使う)
+  - [参考文献](#参考文献-3)
+- [スーパーかわいいロボットｽﾀｯｸﾁｬﾝ](#スーパーかわいいロボットｽﾀｯｸﾁｬﾝ)
+  - [音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)
+    - [参考文献](#参考文献-4)
+  - [M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう](#m5bitlessを使ってｽﾀｯｸﾁｬﾝと遊ぼう)
+- [Scratchサーバーを自分で立ち上げる](#scratchサーバーを自分で立ち上げる)
+  - [拡張機能を追加する](#拡張機能を追加する)
+  - [他のPCからこのサーバの全機能を利用する](#他のpcからこのサーバの全機能を利用する)
+  - [参考文献](#参考文献-5)
+- [おわりに](#おわりに)
+
 # Scratchってなぁに?
 ![Scratch](img/Scratch.png)
 
@@ -126,6 +135,7 @@ Scratchには拡張機能という仕組みがあり、その機能を簡単に�
 サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
 これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
 
+### 独自の拡張機能を追加したオレオレScratchサーバー
 Scratchの拡張機能を独自に追加したサーバーも各所で提供されています。
 例えば、以下のようなサーバーがあります。
 本書では、Stretch3を使っていきます。
@@ -149,11 +159,11 @@ Stretch3の拡張機能には、以下の図のようなものがあります。
 - AkaDako
 - LEGO DUPLO Train
 - IFTTT
-- [not yet]ChatGPT(ChatGPT2Scratch)
-- [not yet]TeachableMachine(TM2Scratch, TMPose2Scratch)
-- [not yet]音声認識(Speech2Scratch)
-- [not yet]画像分類器(ImageClassifier2Scratch)
-- [not yet]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
+- ChatGPT(ChatGPT2Scratch)
+- TeachableMachine(TM2Scratch, TMPose2Scratch)
+- 音声認識(Speech2Scratch)
+- 画像分類器(ImageClassifier2Scratch)
+- ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
 ## Microbit More拡張機能
 [Microbit More](https://microbit-more.github.io/)は、Scratchから[micro:bit](https://microbit.org/)のフル機能を利用できるようにした拡張機能です。
@@ -191,8 +201,15 @@ AkaDakoでは、初めから光センサーや加速度計や距離などのセ�
 ### 参考文献
 - [ビジュアルプログラミングでブルブルブルッ](https://scrapbox.io/M5S/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%96%E3%83%AB%E3%83%96%E3%83%AB%E3%83%96%E3%83%AB%E3%83%83):AkaDakoとhapStakを使って、入力でブルブル震えるシステムを作ってみました。
 
-## IFTTT
+## 音声認識拡張機能
+
+## IFTTT拡張機能
 [IFTTT](https://ifttt.com/)
+
+## ChatGPT拡張機能
+## TeachableMachineに関する拡張機能
+## 画像分類器拡張機能
+## ポーズ認識に関する拡張機能
 
 # M5Stackと遊ぼう!!
 [M5Stack](https://m5stack.com/)
@@ -223,7 +240,7 @@ M5Stackには、機種によって違いますが、以下のような機能が�
 - [M5StackとScratchで遊ぶたった3つの冴えたやり方](https://scrapbox.io/M5S/M5Stack%E3%81%A8Scratch%E3%81%A7%E9%81%8A%E3%81%B6%E3%81%9F%E3%81%A3%E3%81%9F3%E3%81%A4%E3%81%AE%E5%86%B4%E3%81%88%E3%81%9F%E3%82%84%E3%82%8A%E6%96%B9):M5StackとScratchで遊ぶためのUIFlow, M5Scratch, M5bitLessの3(+1)つの方法について解説しています。
 - [ScratchとM5Stackで遊ぶ](https://scrapbox.io/M5S/Scratch%E3%81%A8M5Stack%E3%81%A7%E9%81%8A%E3%81%B6):Scratch遠隔センサーについての説明が少し詳しめです。
 
-## M5bitLess: M5StackでMicrobit Moreを使う
+# M5bitLess = M5Stack x Scratch:M5StackでMicrobit Moreを使う
 ![M5bitLess System](img/M5bitLess-System.png)
 
 [M5bitLess](https://github.com/610t/M5bit-less)は、M5StackでStretch3+Microbit Moreの使うための拙作のプログラムです。
@@ -244,14 +261,14 @@ M5Stackに表示されたのと同じIDを選択してください。
 
 ![M5bitLessの対応ブロック](img/M5bitLess-blocks.png)
 
-### 参考文献
+## 参考文献
 - [M5bitLess: M5Stack x Scratch3 = So Fun!!](https://protopedia.net/prototype/2395):M5bitLessのシステム全体を知るのに良いと思います。
 - [M5bitLess label & data extension](https://protopedia.net/prototype/3224):データをやり取りするLabelとDataというしくみの説明です。
 - [M5bitLessのI/Oサポート](https://protopedia.net/prototype/3821):M5bitLess外部のハードウエアを利用するための拡張についての説明です。
 - デモ類
   - [M5StackとScratchとhapStakでスポーツの秋に挑戦!!](https://protopedia.net/prototype/2549):M5bitLessを使って、運動するゲームを作ってみました。
 
-### その他のマイコンボードで*bitLess系列を使う
+## その他のマイコンボードで*bitLess系列を使う
 M5Stack以外にも、色々なマイコンボードでStretch3+Microbit Moreの構成でScratchを利用することができます。
 - Seeeduino XIAOシリーズ (ESP32C3, nRF52480(Sense)):  [XIAO32bitLess](https://github.com/610t/XIAO32bitLess)
 - Seeeduino WioTerminal:  M5bitLessに対応コードあり
@@ -265,7 +282,7 @@ SeeedのXIAOファミリーは、以下のようなボードになります。
 #### 参考文献
 - [いろんなボードからScratchを使おう](https://scrapbox.io/M5S/%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%BC%E3%83%89%E3%81%8B%E3%82%89Scratch%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86):色々なボードでScratchを使っている例です。
 
-# Scratch1.4 遠隔センサープロトコル
+# Scratch1.4と遠隔センサープロトコル
 
 ## Scratch 1.4
 [Scratch 1.4](https://scratch.mit.edu/scratch_1.4)は、最初に公開されたバージョンのScratchです。
@@ -275,7 +292,7 @@ Smalltalk([Squeak](https://squeak.org/))で記述されています。
 Scratch 1.4はいまでもよく利用されています。
 例えば、Raspberry Piの標準OSには、Scratch 1.4が含まれています。
 
-### 遠隔センサープロトコル(RSP)
+## 遠隔センサープロトコル(RSP)
 Scratch遠隔センサープロトコル([Remote Sensors Protocol](https://en.scratch-wiki.info/wiki/Remote_Sensors_Protocol):以下RSP)は、Scratchとネットワークでつながった外部の何かと情報をやり取りするための仕組みです。
 Scratch同士の通信も可能になっています。
 基本的にはTCP/IP 42001を利用してやり取りしますが、UDP/IP 42001も利用可能です。
@@ -313,7 +330,7 @@ RSPはテキストベースのプロトコル、コマンドが2種類だけ提�
 
 ![Scratch RSP x UIFlow](img/ScratchRSP-UIFlow.png)
 
-## M5Scratch = Scratch x M5Stack
+# M5Scratch = Scratch x M5Stack:M5StackでScratch遠隔センサーを使う
 ![M5Scratch System](img/En_System.png)
 
 ## 参考文献
@@ -341,7 +358,7 @@ AIｽﾀｯｸﾁｬﾝの作成方法に関しては、動画「[知識ゼロ�
 
 ｽﾀｯｸﾁｬﾝは動きが素敵だと思うのですが、動かなくても良いと割り切れる場合はCore2またはCore2awsだけを使って、そのスゴさを確認することはできると思います。
 
-## 音声入出力を使って遊ぼう
+## 音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう
 ![ｽﾀｯｸﾁｬﾝ with voice](img/M5S_voice.png)
 
 [ｽﾀｯｸﾁｬﾝとScratchﾁｬﾝ](https://protopedia.net/prototype/4967)
@@ -349,7 +366,7 @@ AIｽﾀｯｸﾁｬﾝの作成方法に関しては、動画「[知識ゼロ�
 ### 参考文献
 - [Scratch V2 Programming](https://scrapbox.io/610t/Scratch_V2_Programming):ｽﾀｯｸﾁｬﾝとhapStakを音声で使っています。
 
-## M5bitLessを使って遊ぼう
+## M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう
 [ｽﾀｯｸﾁｬﾝ meets Scratch with M5bitLess](https://protopedia.net/prototype/4957)
 
 # Scratchサーバーを自分で立ち上げる
