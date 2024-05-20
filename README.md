@@ -131,6 +131,7 @@ Scratchには拡張機能という仕組みがあり、その機能を簡単に�
 ハードウエアとしては、「micro:bit」やLEGO(MINDSTORMS EV3, BOOST, WeDo)などが利用可能になっています。
 
 拡張機能は、ユーザーから見ると他のScratchの基本的な機能と変わりなく利用可能です。
+
 サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
 これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
 
@@ -182,7 +183,7 @@ Microbit Moreはmicro:bitでの利用の他に、拙作のM5bitLessを使って�
 ## AkaDako拡張機能
 ![AkaDako](img/AkaDako.jpg)
 
-[AkaDako](https://akadako.com/)はTFab Worksによって開発および販売されている、Scratch用のGroveシールドです。
+[AkaDako](https://akadako.com/)は[TFabWorks](https://tfabworks.com/)によって開発および販売されている、Scratch用のGroveシールドです。
 USBで有線接続をします。
 教育向け用途を志向しており、各種学習単元に沿った実験ができるようになっています。
 機種によっては、amazonやTFab Worksオンラインショップ、スイッチサイエンスなどで一般向け販売も行われています([製品ページ](https://akadako.com/product/))。
@@ -327,11 +328,12 @@ SeeedのXIAOファミリーは、以下のようなボードになります。
 Smalltalk([Squeak](https://squeak.org/))で記述されています。
 
 Scratch 1.4はいまでもよく利用されています。
+これは、800x600という狭い画面でも動作できたり、軽く動く、オフラインで使えるなどの特徴があるためです。
 例えば、Raspberry Piの標準OSには、Scratch 1.4が含まれています。
 
 ## 遠隔センサープロトコル(RSP)
 Scratch遠隔センサープロトコル([Remote Sensors Protocol](https://en.scratch-wiki.info/wiki/Remote_Sensors_Protocol):以下RSP)は、Scratchとネットワークでつながった外部の何かと情報をやり取りするための仕組みです。
-Scratch同士の通信も可能になっています。
+「何か」には色々なデバイス以外にもソフトウエアやサービスも含まれており、Scratch同士の通信も可能になっています。
 基本的にはTCP/IP 42001を利用してやり取りしますが、UDP/IP 42001も利用可能です。
 
 RSPを利用するためには、少し準備が必要です。
@@ -341,7 +343,7 @@ Scratch側で遠隔センサーを有効にする必要があります。
 ![RSPを有効にする。](img/RSP-enable.png)
 
 RSPをスマートフォンから利用するためのアプリケーションもいくつか提供されています。
-これらのアプリケーションでは、スマートフォン内蔵の加速度センサーなどの情報を、Scratchから利用できるようになります。
+これらのアプリケーションでは、スマートフォン内蔵の加速度センサーなどの情報を、Scratchから利用できるようになっています。
 - Android
   - [Physical Sensors for Scratch](https://play.google.com/store/apps/details?id=com.moyashi_koubou.androidsensor4scratch)
   - [Scratch Sensor](https://play.google.com/store/apps/details?id=com.emant.scroid)
@@ -349,7 +351,7 @@ RSPをスマートフォンから利用するためのアプリケーション�
 
 ![Android Physical Sensors for Scratch](img/PhisicalSensors4Scratch.png)
 
-RSPはテキストベースのプロトコル、コマンドが2種類だけ提供されています。
+RSPはテキストベースのプロトコルであり、コマンドが2種類だけ提供されています。
 メッセージのやり取りを行う`broadcast "メッセージ"`と
 変数のやり取りを行う`sensor-update "変数名" "値" ...`
 です。
@@ -386,14 +388,17 @@ RSPはテキストベースのプロトコル、コマンドが2種類だけ提�
 例えば、ソフトウエア的にはAIが使えるバージョンやスピーカーになるバージョンがあります。
 ハードウエア的には、タンク形状のものや、かなり小型化されたいるものなど実に多様です。
 [みんなのｽﾀｯｸﾁｬﾝ作例集](https://okimoku.com/gallery/)に色々なｽﾀｯｸﾁｬﾝが紹介されています。
-なんと、等身大で自律的に動く[スタックサン](https://protopedia.net/prototype/4058)というヒューマノイドまであります。
+なんと、等身大で自律的に動く[スタックサン](https://protopedia.net/prototype/4058)というヒューマノイド(?)まであります。
 
-残念なことに、2024年5月時点では、これだけを買えばすぐに使えるというものは存在しません。
+残念なことに、2024年5月時点では、これだけを買えばすぐに使えるというものは普通に販売しているものとしては存在しません。
 体(筐体)の種類もいろいろあり、動かすためのサーボモーターの種類や、M5Stackの機種による違いなどがあり、簡単に説明することができない状態です。
 これは、将来的には解決されると思うのですが、こういう現状のためここではｽﾀｯｸﾁｬﾝの作り方については説明しません、というかできません。
 AIｽﾀｯｸﾁｬﾝの作成方法に関しては、動画「[知識ゼロで作る！　手乗りサイズのｽｰﾊﾟｰｶﾜｲｲﾛﾎﾞｯﾄ　AIｽﾀｯｸﾁｬﾝ2PLUS版](https://www.youtube.com/watch?v=Tit3mTCMoYY)」を見ると作成作業の手順がつかめると思います。
 
 ｽﾀｯｸﾁｬﾝは動きが素敵だと思うのですが、動かなくても良いと割り切れる場合はCore2またはCore2awsだけを使って、そのスゴさを確認することはできると思います。
+
+ｽﾀｯｸﾁｬﾝのソフトウエアは、M5Burnerでもいくつか提供されており、簡単に使うことができます。
+これには、Bluetoothスピーカー版や、AI版などがあります。
 
 ## 音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう
 ![ｽﾀｯｸﾁｬﾝ with voice](img/M5S_voice.png)
@@ -528,7 +533,7 @@ http {
 ```
 
 ここで、`nginx`を起動します。
-設定がうまく行っていれば、 https://localhost:10443/ でScratchにアクセスできるようになっているはずです。
+設定がうまく行っていれば、 `https://サーバーのIPアドレス:10443/` でScratchにアクセスできるようになっているはずです。
 
 > [!NOTE]
 > このサーバにアクセスした時、Chromeブラウザで警告が出た場合、以下のどちらかでアクセス可能になります。
