@@ -67,7 +67,7 @@ Happy Scratch Hacking!!
     - [参考文献](#参考文献)
   - [音声認識拡張機能(Speech2Scratch)](#音声認識拡張機能speech2scratch)
   - [IFTTT拡張機能](#ifttt拡張機能)
-  - [ChatGPT拡張機能](#chatgpt拡張機能)
+  - [ChatGPT拡張機能(CHATGPT2Scratch)](#chatgpt拡張機能chatgpt2scratch)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
   - [画像分類器拡張機能](#画像分類器拡張機能)
   - [ポーズ認識に関する拡張機能](#ポーズ認識に関する拡張機能)
@@ -220,7 +220,30 @@ Scratchにはテキストを翻訳したり、音声で読み上げたりする�
 ## IFTTT拡張機能
 [IFTTT](https://ifttt.com/)
 
-## ChatGPT拡張機能
+## ChatGPT拡張機能(CHATGPT2Scratch)
+ChatGPT拡張機能(CHATGPT2Scratch)は、Scratchから話題のAIであるChatGPTを使うことのできる拡張機能です。
+
+CHATGPT2Scratchのブロックは6種類ですが、実際に利用する時は2種類のブロックだけで十分です。
+![CHATGPT2Scratchのブロック](img/Stretch3-ChatGPT2Scratch-blocks.png)
+
+ChatGPTを利用するためには、アカウント作成やAPIキーの取得、利用料金支払いのためのクレジットカード情報の入力などかなり手間がかかります。
+今のところ、この手順に関しては本書では解説しません。
+ここでは、既にこれらの準備が終了しており、APIキーが取得できていることを前提に話を進めます。
+
+ChatGPTのアカウント作成には、13歳以上であることが必要なので、それに満たない人は保護者の方と一緒に使ってください。
+また、クレジットカードの情報も必要なので、こちらも保護者の方にご相談してください。
+
+CHATGPT2Scratchの[APIキーをセット]ブロックが実行されると、図のようにAPIキーの入力がうながされます。
+ここに、取得したAPIキーを入力してあげます。
+
+![CHATGPT2ScratchのAPIキー設定](img/Stretch3-ChatGPT2Scratch-APIkey.png)
+
+利用は簡単で(()の答え)ブロックにChatGPTに問い合わせしたいテキストを入力するだけです。
+
+![CHATGPT2Scratchの利用例](img/Stretch3-ChatGPT2Scratch-example.png)
+
+ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)や[M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう](#m5bitlessを使ってｽﾀｯｸﾁｬﾝと遊ぼう)でも利用します。
+
 ## TeachableMachineに関する拡張機能
 ## 画像分類器拡張機能
 ## ポーズ認識に関する拡張機能
