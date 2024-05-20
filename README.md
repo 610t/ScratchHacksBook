@@ -54,6 +54,8 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 Happy Scratch Hacking!!
 
 # Scratchってなぁに?
+![Scratch](img/Scratch.png)
+
 [Scratch](https://scratch.mit.edu/)はMITメディアラボが開発したプログラミング言語です。
 プログラムは、ブロックを積み上げて創っていきます。
 しばしば、小学校などのようなプログラミング学習の入門用の教育用途で利用されています。
