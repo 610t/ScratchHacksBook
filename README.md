@@ -4,7 +4,7 @@
     }
 </style> 
 
-# Scratch Hacks!!
+# Scratch Hacks!!<!-- omit in toc -->
 
 初版
 
@@ -56,7 +56,6 @@ Scratchの場合は公式拡張機能を使ってLEGOシリーズやmicro:bitと
 Happy Scratch Hacking!!
 
 # 目次
-- [Scratch Hacks!!](#scratch-hacks)
 - [はじめに](#はじめに)
 - [目次](#目次)
 - [Scratchってなぁに?](#scratchってなぁに)
@@ -66,7 +65,7 @@ Happy Scratch Hacking!!
   - [Microbit More拡張機能](#microbit-more拡張機能)
   - [AkaDako拡張機能](#akadako拡張機能)
     - [参考文献](#参考文献)
-  - [音声認識拡張機能](#音声認識拡張機能)
+  - [音声認識拡張機能(Speech2Scratch)](#音声認識拡張機能speech2scratch)
   - [IFTTT拡張機能](#ifttt拡張機能)
   - [ChatGPT拡張機能](#chatgpt拡張機能)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
@@ -201,7 +200,22 @@ AkaDakoでは、初めから光センサーや加速度計や距離などのセ�
 ### 参考文献
 - [ビジュアルプログラミングでブルブルブルッ](https://scrapbox.io/M5S/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%96%E3%83%AB%E3%83%96%E3%83%AB%E3%83%96%E3%83%AB%E3%83%83):AkaDakoとhapStakを使って、入力でブルブル震えるシステムを作ってみました。
 
-## 音声認識拡張機能
+## 音声認識拡張機能(Speech2Scratch)
+音声認識拡張機能(Speech2Scratch)は、その名前のとおりで、マイクから入力した音声をテキストに変換してくれる機能です。
+Scratchにはテキストを翻訳したり、音声で読み上げたりする機能があるので、組み合わせると面白い作品が作れます。
+
+ブロックは２種類しかありません。
+
+![Speech2Scratchの全てのブロック](img/Stretch3-Speech2Scratch.png)
+
+少し使い方にコツがいるので、動作例を紹介します。
+はじめに、[音声認識開始]ブロックで音声認識をはじめます。
+音声が認識されるまでは、[音声]ブロックには何も文字列が入らない空文字列になるので、文字列が入るまで待機します。
+文字列が入ったら、その文字列に対して処理を行うという手順になります。
+
+![Speech2Scratchの利用例](img/Stretch3-Speech2Scratch-example.png)
+
+[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)では、音声認識を使ってｽﾀｯｸﾁｬﾝと遊ぶ例もご紹介します。
 
 ## IFTTT拡張機能
 [IFTTT](https://ifttt.com/)
