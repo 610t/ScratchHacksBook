@@ -285,6 +285,8 @@ SeeedのXIAOファミリーは、以下のようなボードになります。
 # Scratch1.4と遠隔センサープロトコル
 
 ## Scratch 1.4
+![Scratch 1.4](img/Scratch1.4-RSP.png)
+
 [Scratch 1.4](https://scratch.mit.edu/scratch_1.4)は、最初に公開されたバージョンのScratchです。
 アプリケーションとして提供されており、インターネット接続がないオフラインでも利用可能です。
 Smalltalk([Squeak](https://squeak.org/))で記述されています。
@@ -331,7 +333,30 @@ RSPはテキストベースのプロトコル、コマンドが2種類だけ提�
 ![Scratch RSP x UIFlow](img/ScratchRSP-UIFlow.png)
 
 # M5Scratch = Scratch x M5Stack:M5StackでScratch遠隔センサーを使う
-![M5Scratch System](img/En_System.png)
+![M5Scratch](img/M5Scratch_icon.png)
+
+[M5Scratch](https://github.com/610t/M5Scratch)は、M5StackとScratchで、Scratch遠隔センサー(RSP)を使って情報のやり取りを行うためのプログラムです。
+M5Scratchは、Arduino言語で書かれています。
+
+![M5Scratchシステム構成](img/En_System.png)
+
+M5Scratchは、上の図のように、WiFiを使ってScratchと通信します。
+このため、RSPを利用するためにはIPアドレスや無線LAN(WiFi)の情報を指定する必要があり、これらの設定情報を与える必要があります。
+SDカードがある機種では、SDカードに設定情報を入れておくことができるようにしてあるのですが、SDカードのない機種ではこれらの設定情報をプログラムの中に入れて、再コンパイルする必要があります。
+SDカードで設定可能な機種のために、M5Burnerでも提供していますが、この制限には注意してください。
+
+![M5Burnerを使ってM5Scratchを利用する](img/M5Scratch-M5Burner.png)
+
+SDカードで設定する場合、SDカードの一番上の場所(`/`)の`m5scratch.txt`というファイルに以下の形式で設定情報を入れてください。
+```
+WiFiのSSID
+WiFiのパスワード
+Scratchが動いているパソコンのIPアドレス
+```
+
+Scratch側の最初の設定に関しては、[遠隔センサープロトコル(RSP)](#遠隔センサープロトコルrsp)を参照してください。
+
+M5Scratchでは、はじめにScratch側から変数を送らないとRSPによるデータの交換がはじまらないので、注意してください。
 
 ## 参考文献
 - [M5Scratch: M5Stack x Scratch1.4](https://protopedia.net/prototype/5188):システム全体の説明です。すみません英語です。
