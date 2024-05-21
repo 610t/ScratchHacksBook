@@ -250,12 +250,14 @@ ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音
 ## ポーズ認識に関する拡張機能
 
 # M5Stackと遊ぼう!!
-[M5Stack](https://m5stack.com/)
+本章では、[M5Stack](https://m5stack.com/)というマイコンについて解説していきます。
 
 ## M5Stackってなぁに?
 ![M5Stackファミリー](img/M5Stack-family.jpg)
 
-M5Stackは、色々な機能が一つになった、とても便利なマイコンデバイスです。
+[M5Stack](https://m5stack.com/)は、色々な機能が一つになった、とても便利なマイコンです。
+組み込み用途で必要になってくる、ディスプレイやボタン、筐体などがあるため、大変扱いやすいです。
+毎週新製品が発表され、活発的に動きがあるのも楽しいところです。
 
 M5Stackには、機種によって違いますが、以下のような機能があります。
 各機種のリンクは、日本の正規代理店のひとつであるスイッチサイエンスの販売ページになっています。
@@ -270,12 +272,12 @@ M5Stackには、機種によって違いますが、以下のような機能が�
 - 付属品:		キーボード、腕時計バンド、LEGOマウント
 
 初めて買うときの私のおすすめは、[M5StickC Plus2 ウォッチアクセサリキット](https://www.switch-science.com/products/9420)です。
-腕に巻いて遊べます!!
+腕に巻いて遊べます。
 
 ただ、後で説明するｽﾀｯｸﾁｬﾝで遊びたい場合は、現状ではCore2シリーズ(Core2, [Core2aws](https://www.switch-science.com/products/6784))を買っておいた方が良いです。
 
 ## M5StackとScratchで遊ぶための参考文献
-- [M5StackとScratchで遊ぶたった3つの冴えたやり方](https://scrapbox.io/M5S/M5Stack%E3%81%A8Scratch%E3%81%A7%E9%81%8A%E3%81%B6%E3%81%9F%E3%81%A3%E3%81%9F3%E3%81%A4%E3%81%AE%E5%86%B4%E3%81%88%E3%81%9F%E3%82%84%E3%82%8A%E6%96%B9):M5StackとScratchで遊ぶためのUIFlow, M5Scratch, M5bitLessの3(+1)つの方法について解説しています。
+- [M5StackとScratchで遊ぶたった3つの冴えたやり方](https://scrapbox.io/M5S/M5Stack%E3%81%A8Scratch%E3%81%A7%E9%81%8A%E3%81%B6%E3%81%9F%E3%81%A3%E3%81%9F3%E3%81%A4%E3%81%AE%E5%86%B4%E3%81%88%E3%81%9F%E3%82%84%E3%82%8A%E6%96%B9):M5StackとScratchで遊ぶためのUIFlow, M5Scratch, M5bitLessの3(+1:つくるっち)つの方法について解説しています。
 - [ScratchとM5Stackで遊ぶ](https://scrapbox.io/M5S/Scratch%E3%81%A8M5Stack%E3%81%A7%E9%81%8A%E3%81%B6):Scratch遠隔センサーについての説明が少し詳しめです。
 
 # M5bitLess = M5Stack x Scratch:M5StackでMicrobit Moreを使う
