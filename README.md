@@ -66,7 +66,12 @@ Happy Scratch Hacking!!
   - [AkaDako拡張機能](#akadako拡張機能)
     - [参考文献](#参考文献)
   - [音声認識拡張機能(Speech2Scratch)](#音声認識拡張機能speech2scratch)
-  - [IFTTT拡張機能](#ifttt拡張機能)
+  - [IFTTT Webhooks拡張機能](#ifttt-webhooks拡張機能)
+    - [IFTTT側での設定](#ifttt側での設定)
+    - [Scratchでのプログラミング](#scratchでのプログラミング)
+      - [デモ: 侵入検知器](#デモ-侵入検知器)
+      - [デモ:　音声入力翻訳システム](#デモ音声入力翻訳システム)
+      - [デモ: りんごを食べようゲーム](#デモ-りんごを食べようゲーム)
   - [ChatGPT拡張機能(CHATGPT2Scratch)](#chatgpt拡張機能chatgpt2scratch)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
   - [画像分類器拡張機能](#画像分類器拡張機能)
@@ -223,8 +228,70 @@ Scratchにはテキストを翻訳したり、音声で読み上げたりする�
 
 [音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)では、音声認識を使ってｽﾀｯｸﾁｬﾝと遊ぶ例もご紹介します。
 
-## IFTTT拡張機能
-[IFTTT](https://ifttt.com/)
+## IFTTT Webhooks拡張機能
+[IFTTT](https://ifttt.com/)は、IoT(Internet of Thinks)でよく使われるサービスです。
+IoTとは、なんでもインターネットにつないで、何かをしようということです。
+ここで、つなぐものは後で出てくるM5Stackのようなマイコンだったり、スマートセンサー類だったりします。
+
+IFTTTでは、その名のとおり、IFに相当する特定のイベント(トリガー)が発生した時に、THENに相当する色々なサービス(アクション)を行うというような動作をします。
+サービスの部分では、例えばLINEや電子メールなどにメッセージを送ったり、スプレッドシートに書き込んだりなど色々なことができます。
+
+[IFTTT Webhooks](https://github.com/NorifumiOgawa/iftttWebhooks)拡張機能はScratchからIFTTTのWebhook機能を利用するための拡張機能です。
+トリガーとしてWebhookを利用しており、3つまでの値が送れるようになっています。
+
+> [!NOTE]
+> 現在、IFTTTの無料サービスでは、Webhookは利用できません。
+> 有料プランを利用するか、無料トライアルを利用する必要があります。
+
+### IFTTT側での設定
+今回のデモでは、すべてトリガーとしてWebhookを使い、アクションとしてはLINE Notifyを使います。
+ここでは、その設定に関して説明していきます。
+
+アプレットの構成は、以下の図のようになります。
+
+![IFTTTアプレット設定](img/IFTTT_Applet.png)
+
+はじめに、トリガーであるWebhookを設定します。
+後で使うキーは、WebhookのURLの末尾に記述されています。
+
+![IFTTTトリガー設定](img/IFTTT_Webhook.png)
+
+次にアクションであるLINE Notifyの設定です。
+LINEとの接続部分に関しては省略しますが、指示どおりに設定していけば大丈夫です。
+
+![IFTTTアクション設定](img/IFTTT_LINE.png)
+
+### Scratchでのプログラミング
+IFTTT Webhooks拡張機能には、以下のようなブロックがあります。
+
+![IFTTT拡張機能のブロック](img/Stretch3_IFTTT_Webhooks_blocks.png)
+
+使い方は、以下のような流れになります。
+-	IFTTT Webhookアプレットを利用する場合keyが必要なので、これを与える必要があります(［IFTTT key:(key)］ブロック)。
+		keyはWebhook URLの最後にある文字列です。
+-	イベント名でどのアプレットが使われるか指定するので、これを適切に設定する必要があります(［IFTTT event:(event_name)］ブロック)。
+	値は3つまで利用でき、それぞれ`value1, value2, value3`(［value1を(value1)にする］などのブロック)が利用できます。
+-	最後に［送る］ブロックでデータが送られます。
+
+以下、Scratchでのプログラムの例を示します。
+
+#### デモ: 侵入検知器
+![新入検知器](img/Stretch3_IFTTT_demo_VideoMotion.png)
+
+ビデオモーションセンサーを使って、動きを検知し、動きが大きい時には侵入されたと考えて、LINE Notifyで通知を行います。
+
+#### デモ:　音声入力翻訳システム
+![音声入力翻訳システム](img/Stretch3_IFTTT_demo_translate.png)
+
+音声入力した言葉をテキストに変換し、そのテキストを翻訳してLINE Notifyで送ります。
+
+#### デモ: りんごを食べようゲーム
+![Scratch + Microbit More feat. M5Stack](img/Stretch3_IFTTT_demo_game.png)
+
+Stretch3のMicrobit Moreを使って、猫を加速度センサーで動かし、りんごを捕まえましょう。
+りんごを捕まえると、LINE Notifyで通知が送られます。
+
+今回は、後述のM5bitLessを使って、M5Stackの加速度センサーを使いましたが、もちろんmicro:bitでも大丈夫です。
 
 ## ChatGPT拡張機能(CHATGPT2Scratch)
 ChatGPT拡張機能(CHATGPT2Scratch)は、Scratchから話題のAIであるChatGPTを使うことのできる拡張機能です。
