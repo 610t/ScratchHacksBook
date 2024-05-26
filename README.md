@@ -137,7 +137,7 @@ Scratchには拡張機能という仕組みがあり、その機能を簡単に�
 
 拡張機能は、ユーザーから見ると他のScratchの基本的な機能と変わりなく利用可能です。
 
-サーバー開発者視点から見ると、Scratchに機能を追加するためのフレームワークになっています。
+サーバー開発者から見ると、Scratchに機能を追加するためのフレームワークになっています。
 これを使うことで、比較的簡単にScratchに機能を追加することができるのです。
 
 ### 独自の拡張機能を追加したScratch拡張サーバー
@@ -147,7 +147,7 @@ Scratchの拡張機能を独自に追加したサーバー(以下、拡張サー
 - [Stretch3](https://stretch3.github.io/):AI系に強い
 - [Xcratch](https://xcratch.github.io/editor/):	拡張機能動的追加型
 - [blicklife](https://bricklife.com/scratch-gui/):	LEGOに強い
-- [toioDo](https://toio.github.io/toio-visual-programming/beta/):	toio用環境
+- [toioDo](https://toio.github.io/toio-visual-programming/beta/):	Sony [toio](https://toio.io/)用環境
 - [CodeSkool](https://ide.codeskool.cc/):	なんかいっぱい
 - [つくるっち](https://sohta02.sakura.ne.jp/tukurutch/):	ハードウエア系に強い
 
@@ -170,10 +170,10 @@ Stretch3の拡張機能には、以下の図のようなものがあります。
 - LEGO DUPLO Train
 - IFTTT
 - ChatGPT(ChatGPT2Scratch)
-- TeachableMachine(TM2Scratch, TMPose2Scratch)
-- 音声認識(Speech2Scratch)
-- 画像分類器(ImageClassifier2Scratch)
-- ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
+- [TBD]TeachableMachine(TM2Scratch, TMPose2Scratch)
+- [TBD]音声認識(Speech2Scratch)
+- [TBD]画像分類器(ImageClassifier2Scratch)
+- [TBD]ポーズ認識(Posenet2Scratch, Facemesh2Scratch, Handpose2Scratch)
 
 ## Microbit More拡張機能
 [Microbit More](https://microbit-more.github.io/)は、Scratchから[micro:bit](https://microbit.org/)のフル機能を利用できるようにした拡張機能です。
@@ -189,6 +189,7 @@ Stretch3の拡張機能には、以下の図のようなものがあります。
 |ピンの利用|限定的|完全に利用可能|
 
 Microbit Moreはmicro:bitでの利用の他に、拙作のM5bitLessを使って、M5Stackシリーズのマイコンで利用することも可能です。
+詳細は、[M5bitLess = M5Stack x Scratch:M5StackでMicrobit Moreを使う](#m5bitless--m5stack-x-scratchm5stackでmicrobit-moreを使う)でご紹介します。
 
 ## AkaDako拡張機能
 ![AkaDako](img/AkaDako.jpg)
@@ -321,8 +322,6 @@ CHATGPT2Scratchの[APIキーをセット]ブロックが実行されると、図
 ![CHATGPT2ScratchのAPIキー設定](img/Stretch3-ChatGPT2Scratch-APIkey.png)
 
 利用は簡単で(()の答え)ブロックにChatGPTに問い合わせしたいテキストを入力するだけです。
-
-![CHATGPT2Scratchの利用例](img/Stretch3-ChatGPT2Scratch-example.png)
 
 ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)や[M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう](#m5bitlessを使ってｽﾀｯｸﾁｬﾝと遊ぼう)でも利用します。
 
