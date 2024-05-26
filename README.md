@@ -6,8 +6,6 @@
 
 # Scratch Hacks!!<!-- omit in toc -->
 
-初版(α0): 2024年5月26日(日)
-
 筆者:武藤武士 (X:@610t)
 
 # はじめに
@@ -99,6 +97,7 @@ Happy Scratch Hacking!!
   - [他のPCからこのサーバの全機能を利用する](#他のpcからこのサーバの全機能を利用する)
   - [参考文献](#参考文献-5)
 - [おわりに](#おわりに)
+- [奥付](#奥付)
 
 # Scratchってなぁに?
 ![Scratch](img/Scratch.png)
@@ -662,3 +661,13 @@ http {
 - [Scratch at FreeBSD](https://scrapbox.io/BSD/Scratch_at_FreeBSD):実際に[FreeBSD](https://www.freebsd.org/)というOSでサーバーを立ち上げた例です。他のOSでも参考になるかと思います。
 
 # おわりに
+とりあえず、Scratch Days in Tokyou 2024中にbeta0版として完成させました。
+まだまだ内容を追加して、いつかはちゃんとした同人誌として完成させたいと思います。
+特に、Stretch3の拡張機能については、書きたいことがもっとたくさんあります。
+
+皆さんからのご意見、ご要望をお待ちしております。
+- X(twitter): @610t
+- Email: takeshi.mutoh@gmail.com
+
+# 奥付
+初版(beta0): 2024年5月26日(日) [ Scratch Day 2024 in Tokyo](https://day.scratch-ja.org/)が行われている日に
