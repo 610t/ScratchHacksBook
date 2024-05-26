@@ -86,6 +86,7 @@ Happy Scratch Hacking!!
 - [Scratch1.4と遠隔センサープロトコル](#scratch14と遠隔センサープロトコル)
   - [Scratch 1.4](#scratch-14)
   - [遠隔センサープロトコル(RSP)](#遠隔センサープロトコルrsp)
+    - [AndroidでのRSPの利用](#androidでのrspの利用)
   - [Scratch x M5Stack UIFlow](#scratch-x-m5stack-uiflow)
 - [M5Scratch = Scratch x M5Stack:M5StackでScratch遠隔センサーを使う](#m5scratch--scratch-x-m5stackm5stackでscratch遠隔センサーを使う)
   - [参考文献](#参考文献-3)
@@ -412,7 +413,7 @@ SeeedのXIAOファミリーは、以下のようなボードになります。
 Smalltalk([Squeak](https://squeak.org/))で記述されています。
 
 Scratch 1.4はいまでもよく利用されています。
-これは、800x600という狭い画面でも動作できたり、軽く動く、オフラインで使えるなどの特徴があるためです。
+これは、800x480という狭い画面でも動作できたり、軽く動く、オフラインで使えるなどの特徴があるためです。
 例えば、Raspberry Piの標準OSには、Scratch 1.4が含まれています。
 
 ## 遠隔センサープロトコル(RSP)
@@ -420,20 +421,10 @@ Scratch遠隔センサープロトコル([Remote Sensors Protocol](https://en.sc
 「何か」には色々なデバイス以外にもソフトウエアやサービスも含まれており、Scratch同士の通信も可能になっています。
 基本的にはTCP/IP 42001を利用してやり取りしますが、UDP/IP 42001も利用可能です。
 
-RSPを利用するためには、少し準備が必要です。
-Scratch側で遠隔センサーを有効にする必要があります。
+RSPを利用するためには、少し準備が必要で、Scratch側で遠隔センサーを有効にする必要があります。
 そのためには以下の図のように、調べる->"スライダセンサーの値"を右クリック->"遠隔センサー接続を有効にする"を選びます。
 
 ![RSPを有効にする。](img/RSP-enable.png)
-
-RSPをスマートフォンから利用するためのアプリケーションもいくつか提供されています。
-これらのアプリケーションでは、スマートフォン内蔵の加速度センサーなどの情報を、Scratchから利用できるようになっています。
-- Android
-  - [Physical Sensors for Scratch](https://play.google.com/store/apps/details?id=com.moyashi_koubou.androidsensor4scratch)
-  - [Scratch Sensor](https://play.google.com/store/apps/details?id=com.emant.scroid)
-- iOS:		軽く探した範囲では見つかりませんでした。情報求む!!
-
-![Android Physical Sensors for Scratch](img/PhisicalSensors4Scratch.png)
 
 RSPはテキストベースのプロトコルであり、コマンドが2種類だけ提供されています。
 メッセージのやり取りを行う`broadcast "メッセージ"`と
@@ -441,6 +432,19 @@ RSPはテキストベースのプロトコルであり、コマンドが2種類�
 です。
 
 ![RSP command](img/En_M5Scratch.png)
+
+### AndroidでのRSPの利用
+RSPをスマートフォンから利用するためのアプリケーションもいくつか提供されています。
+これらのアプリケーションでは、スマートフォン内蔵の加速度センサーなどの情報を、Scratchから利用できるようになっています。
+- Android
+  - ~~[Physical Sensors for Scratch](https://play.google.com/store/apps/details?id=com.moyashi_koubou.androidsensor4scratch)~~:現在利用できません。
+  - [Scratch Sensor](https://play.google.com/store/apps/details?id=com.emant.scroid)
+- iOS:		軽く探した範囲では見つかりませんでした。情報求む!!
+
+下の図は、Physical Sensors for ScratchのUIです。
+スマートフォンの傾きセンサーやコンパス、音入力などが利用可能になっています。
+
+![Android Physical Sensors for Scratch](img/PhisicalSensors4Scratch.png)
 
 ## Scratch x M5Stack UIFlow
 [UIFlow](https://flow.m5stack.com/)はM5Stackの標準開発環境のひとつです。
