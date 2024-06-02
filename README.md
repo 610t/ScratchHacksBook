@@ -483,7 +483,7 @@ Scratch側の最初の設定に関しては、[遠隔センサープロトコル
 M5Scratchでは、はじめにScratch側から変数を送らないとRSPによるデータの交換がはじまらないので、注意してください。
 
 ## 参考文献
-- [M5Scratch: M5Stack x Scratch1.4](https://protopedia.net/prototype/5188):システム全体の説明です。すみません英語です。
+- [M5Scratch: M5Stack x Scratch1.4](https://protopedia.net/prototype/5188):システム全体の説明です。
 - デモ類
   - [M5Scratchを使って、M5Scratchの仲間たちとScratchを使ったゲームを作ろう!!](https://elchika.com/article/29135dba-ac4d-4ed7-b6cb-e33750f52f6b/):M5Scratchでゲームを作ってみた例です。
   - [M5Stack Christmas with M5Scratch](https://www.hackster.io/610t/m5stack-christmas-with-m5scratch-1055a2):これもゲームを作ってみた例です。すみません英語です。
