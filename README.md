@@ -71,9 +71,15 @@ Happy Scratch Hacking!!
       - [デモ:　音声入力翻訳システム](#デモ音声入力翻訳システム)
       - [デモ: りんごを食べようゲーム](#デモ-りんごを食べようゲーム)
   - [ChatGPT拡張機能(CHATGPT2Scratch)](#chatgpt拡張機能chatgpt2scratch)
-  - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
-  - [画像分類器拡張機能](#画像分類器拡張機能)
   - [ポーズ認識に関する拡張機能](#ポーズ認識に関する拡張機能)
+    - [Facemesh2Scratch](#facemesh2scratch)
+    - [Posenet2Scratch](#posenet2scratch)
+    - [Handpose2Scratch](#handpose2scratch)
+  - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
+    - [TMpose2Scratch](#tmpose2scratch)
+    - [TM2Scratch](#tm2scratch)
+    - [ML2Scratch](#ml2scratch)
+  - [画像分類器拡張機能(ImageClassifier2Scratch)](#画像分類器拡張機能imageclassifier2scratch)
 - [M5Stackと遊ぼう!!](#m5stackと遊ぼう)
   - [M5Stackってなぁに?](#m5stackってなぁに)
   - [M5StackとScratchで遊ぶための参考文献](#m5stackとscratchで遊ぶための参考文献)
@@ -325,9 +331,21 @@ CHATGPT2Scratchの[APIキーをセット]ブロックが実行されると、図
 
 ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)や[M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう](#m5bitlessを使ってｽﾀｯｸﾁｬﾝと遊ぼう)でも利用します。
 
-## TeachableMachineに関する拡張機能
-## 画像分類器拡張機能
 ## ポーズ認識に関する拡張機能
+### Facemesh2Scratch
+
+### Posenet2Scratch
+
+### Handpose2Scratch
+
+## TeachableMachineに関する拡張機能
+### TMpose2Scratch
+
+### TM2Scratch
+
+### ML2Scratch
+
+## 画像分類器拡張機能(ImageClassifier2Scratch)
 
 # M5Stackと遊ぼう!!
 本章では、[M5Stack](https://m5stack.com/)というマイコンについて解説していきます。
