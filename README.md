@@ -333,6 +333,31 @@ ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音
 
 ## ポーズ認識に関する拡張機能
 ### Facemesh2Scratch
+[Facemesh2Scratch](https://github.com/champierre/facemesh2scratch)は、ScratchでWebカメラの映像から顔を見つけて、その顔を部品ごとに追跡できる拡張機能です。
+
+顔が468点のメッシュに分割されその位置がわかるようになっています。
+複数人数にも対応しており、人ごとにメッシュが作成されます。
+
+技術に関する詳細は、
+[Face and hand tracking in the browser with MediaPipe and TensorFlow.js](https://blog.tensorflow.org/2020/03/face-and-hand-tracking-in-browser-with-mediapipe-and-tensorflowjs.html)
+に記述されています。
+
+Facemesh2Scratchで提供されているブロックは以下の通りです。
+ほとんどの場合、((1)人目の(1)番目の部位のx座標)と((1)人目の(1)番目の部位のy座標)を使って特定の部位の位置を検出するのに使うことになると思います。
+複数人数での応用では、人目部分で人を区別することができます。
+
+ちなみに、1番目の場所は鼻にあたるので、(x座標を()y座標を()にする)と使うことで、スプライトが鼻を追いかけるコードが簡単に書けます。
+
+![Facemesh2Scratchのブロック](img/Stretch3-Facemesh2Scratch-blocks.png)
+
+以下のようなコードを書くことで、提供されているメッシュのすべての点を表示することができます。
+通常のモードでは遅いため、ターボモードを利用することをお勧めします。
+
+![Facemesh2Scratchのデモコード](img/Stretch3-Facemesh2Scratch-code.png)
+
+このデモコードで以下のように、顔がメッシュに分けられた状態で表示されます。
+
+![Facemesh2Scratchのデモ動作の様子](img/Stretch3-Facemesh2Scratch-demo.png)
 
 ### Posenet2Scratch
 
