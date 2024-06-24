@@ -72,9 +72,9 @@ Happy Scratch Hacking!!
       - [デモ: りんごを食べようゲーム](#デモ-りんごを食べようゲーム)
   - [ChatGPT拡張機能(CHATGPT2Scratch)](#chatgpt拡張機能chatgpt2scratch)
   - [ポーズ認識に関する拡張機能](#ポーズ認識に関する拡張機能)
-    - [Facemesh2Scratch](#facemesh2scratch)
-    - [Posenet2Scratch](#posenet2scratch)
-    - [Handpose2Scratch](#handpose2scratch)
+    - [Posenet2Scratch：姿勢認識](#posenet2scratch姿勢認識)
+    - [Handpose2Scratch:手の姿勢認識](#handpose2scratch手の姿勢認識)
+    - [Facemesh2Scratch：顔のメッシュ分割](#facemesh2scratch顔のメッシュ分割)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
     - [TMpose2Scratch](#tmpose2scratch)
     - [TM2Scratch](#tm2scratch)
@@ -332,7 +332,55 @@ CHATGPT2Scratchの[APIキーをセット]ブロックが実行されると、図
 ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう)や[M5bitLessを使ってｽﾀｯｸﾁｬﾝと遊ぼう](#m5bitlessを使ってｽﾀｯｸﾁｬﾝと遊ぼう)でも利用します。
 
 ## ポーズ認識に関する拡張機能
-### Facemesh2Scratch
+ここでは、Stretch3で利用可能なポーズ認識の拡張機能について紹介します。
+ポーズ認識は、例えば鼻や口などの位置を認識して、その場所を返してくれるような機能になります。
+
+### Posenet2Scratch：姿勢認識
+[Posenet2Scratch](https://github.com/champierre/posenet2scratch)は、ScratchでWebカメラの映像から体の姿勢を見つけて、その顔を部品ごとに追跡できる拡張機能です。
+姿勢認識には、[PoseNet](https://medium.com/tensorflow/real-time-human-pose-estimation-in-the-browser-with-tensorflow-js-7dd0bc881cd5)が利用されています。
+
+Posenet2Scratchでは、以下のブロックのように部品ごとに位置がわかるようになっているため、あとで紹介するFacemesh2Scratchより用途によっては使いやすいと思います。
+
+Posenet2Scratchで提供されているブロックは以下のとおりです。
+
+![Posenet2Scratchのブロック](img/Stretch3-Posenet2Scratch-blocks.png)
+
+以下のようなコードを書くことで、一般的にスティック線図と呼ばれる姿勢が良くわかる図を描くことができます。
+コードは図ではスティック線図を描く部分を一部を省略していますが、実際のコード全体は[examples/Posenet2Scratch_demo.sb3](examples/Posenet2Scratch_demo.sb3)として提供しています。
+通常のモードでは遅いため、ターボモードを利用することをお勧めします。
+
+![Posenet2Scratchのデモコード](img/Stretch3-Posenet2Scratch-code.png)
+
+デモでは、以下のように体の姿勢がスティック線図として表示されます。
+
+![Posenet2Scratchのデモ動作の様子](img/Stretch3-Posenet2Scratch-demo.png)
+
+### Handpose2Scratch:手の姿勢認識
+[Handpose2Scratch](https://github.com/champierre/handpose2scratch)は、ScratchでWebカメラの映像から手の姿勢を見つけて、その手を部品ごとに追跡できる拡張機能です。
+
+技術に関する詳細は、
+[Face and hand tracking in the browser with MediaPipe and TensorFlow.js](https://blog.tensorflow.org/2020/03/face-and-hand-tracking-in-browser-with-mediapipe-and-tensorflowjs.html)
+に記述されています。
+
+Handpose2Scratchで提供されるブロックは以下のとおりです。
+(手首(1))となっている部分は場所を表し、1-21で"小指の先端(21)"などの場所を表しています。
+ここには、数字のブロックを入れることも可能で、全ての点を描画したい時などに利用することができます。
+
+![Handpose2Scratchのブロック](img/Stretch3-Handpose2Scratch-blocks.png)
+
+デモのコードは以下のとおりです。
+このデモでは、手の姿勢を認識して、スティック線図を描きます。
+コードは図ではスティック線図を描く部分を一部を省略していますが、実際のコード全体は[examples/Handpose2Scratch_demo.sb3](examples/Handpose2Scratch_demo.sb3)として提供しています。
+通常のモードでは遅いため、ターボモードを利用することをお勧めします。
+
+![Handpose2Scratchのデモコード](img/Stretch3-Handpose2Scratch-code.png)
+
+デモでは、以下のように手の姿勢がスティック線図として表示されます。
+
+![Handpose2Scratchのデモ動作の様子](img/Stretch3-Handpose2Scratch-demo.png)
+
+
+### Facemesh2Scratch：顔のメッシュ分割
 [Facemesh2Scratch](https://github.com/champierre/facemesh2scratch)は、ScratchでWebカメラの映像から顔を見つけて、その顔を部品ごとに追跡できる拡張機能です。
 
 顔が468点のメッシュに分割されその位置がわかるようになっています。
@@ -345,12 +393,14 @@ ChatGPTは、[音声入出力を使ってｽﾀｯｸﾁｬﾝと遊ぼう](#音
 Facemesh2Scratchで提供されているブロックは以下の通りです。
 ほとんどの場合、((1)人目の(1)番目の部位のx座標)と((1)人目の(1)番目の部位のy座標)を使って特定の部位の位置を検出するのに使うことになると思います。
 複数人数での応用では、人目部分で人を区別することができます。
+"(1)人目"や"(1)番目"部分には、数字のブロックを入れることも可能で、全ての点を描画したい時などに利用することができます。
 
-ちなみに、1番目の場所は鼻にあたるので、(x座標を()y座標を()にする)と使うことで、スプライトが鼻を追いかけるコードが簡単に書けます。
+ちなみに、1番目の場所は口の上部にあたるので、(x座標を()y座標を()にする)と使うことで、スプライトが口を追いかけるコードが簡単に書けます。
 
 ![Facemesh2Scratchのブロック](img/Stretch3-Facemesh2Scratch-blocks.png)
 
 以下のようなコードを書くことで、提供されているメッシュのすべての点を表示することができます。
+実際のコード全体は[examples/Facemesh2Scratch_demo.sb3](examples/Facemesh2Scratch_demo.sb3)として提供しています。
 通常のモードでは遅いため、ターボモードを利用することをお勧めします。
 
 ![Facemesh2Scratchのデモコード](img/Stretch3-Facemesh2Scratch-code.png)
@@ -359,9 +409,7 @@ Facemesh2Scratchで提供されているブロックは以下の通りです。
 
 ![Facemesh2Scratchのデモ動作の様子](img/Stretch3-Facemesh2Scratch-demo.png)
 
-### Posenet2Scratch
 
-### Handpose2Scratch
 
 ## TeachableMachineに関する拡張機能
 ### TMpose2Scratch
