@@ -102,6 +102,15 @@ Happy Scratch Hacking!!
   - [拡張機能を追加する](#拡張機能を追加する)
   - [他のPCからこのサーバの全機能を利用する](#他のpcからこのサーバの全機能を利用する)
   - [参考文献](#参考文献-5)
+- [拡張機能の作成](#拡張機能の作成)
+  - [通常の拡張機能を作成する](#通常の拡張機能を作成する)
+  - [xcratch用拡張機能](#xcratch用拡張機能)
+    - [xcratchを利用する](#xcratchを利用する)
+    - [xcratchの拡張機能を作成する](#xcratchの拡張機能を作成する)
+      - [例: ambient用の拡張機能](#例-ambient用の拡張機能)
+        - [ambient拡張機能の使い方](#ambient拡張機能の使い方)
+        - [ambient拡張機能の解説](#ambient拡張機能の解説)
+  - [参考文献](#参考文献-6)
 - [おわりに](#おわりに)
 - [奥付](#奥付)
 
@@ -750,6 +759,81 @@ http {
 ## 参考文献
 - [Scratchサーバーを手元で立ち上げる](https://scrapbox.io/610t/Scratch%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E6%89%8B%E5%85%83%E3%81%A7%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%8B):Scratchサーバーを自分で作るための概略説明です。
 - [Scratch at FreeBSD](https://scrapbox.io/BSD/Scratch_at_FreeBSD):実際に[FreeBSD](https://www.freebsd.org/)というOSでサーバーを立ち上げた例です。他のOSでも参考になるかと思います。
+
+# 拡張機能の作成
+Scratchでは、既に書いたように、サーバーのソースが公開されており、自分の好きなように変更してサーバーを立ち上げることができます。
+ただ、やみくもにソースを変更して機能を追加したりすることは大変な作業になります。
+
+拡張機能は自分の足したい機能を決まったフォーマットで実装するための仕組みで、比較的簡単に機能追加ができます。
+
+## 通常の拡張機能を作成する
+通常の拡張機能を作成する方法に関しては、有料(500円)ですが[Scratch を改造しよう](https://otona-scratch.champierre.com/books/1/posts)が大変参考になります。
+
+これに関しては、今後解説を追加したいと思います。
+
+## xcratch用拡張機能
+[xcratch](https://xcratch.github.io/index-ja.html)では、xcratch用に作成された拡張機能を動的に読みこむことができる拡張機能が提供されています。
+xcratch拡張機能用のモジュールを作成するには、決まったフォーマットで拡張機能を作成する必要があります。
+
+![xcratch拡張機能](img/xcratch-extension.png)
+
+### xcratchを利用する
+xcratchの"拡張機能を読み込む"を選択すると、以下のようなURLを入力するウインドウが立ち上がります。
+ここで、xcratch用に作成されたモジュールのURLを入力します。
+
+![xcratch拡張機能URL入力ウインドウ](img/xcratch-URL.png)
+
+xcratch用に提供されているモジュールには、例えば以下のようなものがあります。
+- [Microbit More](https://microbit-more.github.io/):   https://microbit-more.github.io/dist/microbitMore.mjs
+- [NumberBank](https://con3.com/sc2scratch/?page_id=372):      https://con3code.github.io/xcx-numberbank/dist/numberbank.mjs
+- [Ambient](https://github.com/610t/ambient/):         https://610t.github.io/ambient/dist/ambient.mjs
+
+### xcratchの拡張機能を作成する
+ここでは、xcratchの拡張機能の作成方法を解説します。
+xcratch拡張機能の作成方法は、[Interface 2022/2: 大人のためのスクラッチHack](https://cc.cqpub.co.jp/lib/system/doclib_item/1545/)が詳しいです。
+
+実際の作成方法に関しては、後日記述します。
+
+#### 例: ambient用の拡張機能
+[ambient拡張機能](https://github.com/610t/ambient/)は、私が作成した[Ambient](https://github.com/610t/ambient/)というデータ蓄積およびグラフ化サービス用のxcratch拡張機能です。
+
+ambient拡張機能を利用するには、xcratch拡張機能でURLとして https://610t.github.io/ambient/dist/ambient.mjs を指定してください。
+ソースコードは、githubの https://github.com/610t/ambient/ で提供しています。
+
+##### ambient拡張機能の使い方
+はじめに使い方を簡単に説明します。
+
+ambient拡張機能には、以下のようなブロックがあります。
+
+![Ambient拡張機能のブロック](img/xcratch-ambient-blocks.png)
+
+はじめにambientでアカウントを作成します。
+これに関しては、ここでは省略します。
+
+ambientを利用するためには、自分のアカウントのChannel IDとWrite Keyを準備しておきます。
+![Ambient初期化ブロック](img/xcratch-ambient-block-init.png)
+ブロックでこのChannel IDとWrite Keyを設定します。
+
+送るデータは、
+![Ambientブロック](img/xcratch-ambient-block-set-data.png)
+で設定します。
+設定しただけではデータが送られていないことに注意が必要です。
+
+実際にデータを送るには
+![Ambientブロック](img/xcratch-ambient-block-send-data.png)
+ブロックを使います。
+この時、設定したデータはクリアされます。
+
+強制的にデータのクリアを行いたい時には、
+![Ambientブロック](img/xcratch-ambient-block-clear-data.png)
+ブロックを使います。
+
+##### ambient拡張機能の解説
+今後作成予定です。
+
+## 参考文献
+- [Scratch を改造しよう](https://otona-scratch.champierre.com/books/1/posts)
+- [Interface 2022/2: 大人のためのスクラッチHack](https://cc.cqpub.co.jp/lib/system/doclib_item/1545/)
 
 # おわりに
 とりあえず、Scratch Days in Tokyou 2024中にbeta0版として完成させました。
