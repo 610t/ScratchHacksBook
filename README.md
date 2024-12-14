@@ -75,6 +75,7 @@ Happy Scratch Hacking!!
     - [Posenet2Scratch：姿勢認識](#posenet2scratch姿勢認識)
     - [Handpose2Scratch:手の姿勢認識](#handpose2scratch手の姿勢認識)
     - [Facemesh2Scratch：顔のメッシュ分割](#facemesh2scratch顔のメッシュ分割)
+  - [地図で遊ぼう!!: Geo Scratch](#地図で遊ぼう-geo-scratch)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
     - [TMpose2Scratch](#tmpose2scratch)
     - [TM2Scratch](#tm2scratch)
@@ -418,6 +419,22 @@ Facemesh2Scratchで提供されているブロックは以下の通りです。
 
 ![Facemesh2Scratchのデモ動作の様子](img/Stretch3-Facemesh2Scratch-demo.png)
 
+
+## 地図で遊ぼう!!: Geo Scratch
+![Geo Scratchの動作イメージ](img/Stretch3_GeoScratch_image.png)
+
+[Geo Scratch拡張機能](https://github.com/geolonia/x-geo-scratch)は、Scratchから[OpenStreetMap](https://www.openstreetmap.org/)の地図を簡単に扱えるようにした拡張機能です。
+地図を表示し、動かしたり、回転したりができます。
+更に、都道府県名や市町村、場所の名前、現在の緯度、経度などの情報が取得可能です。
+
+Geo Scratchで提供されるブロックは、以下の通りです。
+![Geo Scratchのブロック](img/Stretch3_GeoScratch_blocks.png)
+
+ここでは、利用例を二つご紹介します。
+ともに、なんらかの操作で地図をスクロール表示します。
+最初の例では、zとxキーで回転表示もできます。
+- キーボードの入力で地図をスクロール表示: [examples/GeoScratchKey.sb3](examples/GeoScratchKey.sb3)
+- マウスの操作で地図をスクロール: [examples/GeoScratch.sb3](examples/GeoScratch.sb3)
 
 
 ## TeachableMachineに関する拡張機能
