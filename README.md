@@ -76,6 +76,8 @@ Happy Scratch Hacking!!
     - [Handpose2Scratch:手の姿勢認識](#handpose2scratch手の姿勢認識)
     - [Facemesh2Scratch：顔のメッシュ分割](#facemesh2scratch顔のメッシュ分割)
   - [地図で遊ぼう!!: Geo Scratch](#地図で遊ぼう-geo-scratch)
+    - [Geo Scratchを使った例](#geo-scratchを使った例)
+    - [Get Scratchで作るナビシステム](#get-scratchで作るナビシステム)
   - [TeachableMachineに関する拡張機能](#teachablemachineに関する拡張機能)
     - [TMpose2Scratch](#tmpose2scratch)
     - [TM2Scratch](#tm2scratch)
@@ -430,12 +432,21 @@ Facemesh2Scratchで提供されているブロックは以下の通りです。
 Geo Scratchで提供されるブロックは、以下の通りです。
 ![Geo Scratchのブロック](img/Stretch3_GeoScratch_blocks.png)
 
+### Geo Scratchを使った例
 ここでは、利用例を二つご紹介します。
 ともに、なんらかの操作で地図をスクロール表示します。
 最初の例では、zとxキーで回転表示もできます。
 - キーボードの入力で地図をスクロール表示: [examples/GeoScratchKey.sb3](examples/GeoScratchKey.sb3)
 - マウスの操作で地図をスクロール: [examples/GeoScratch.sb3](examples/GeoScratch.sb3)
 
+### Get Scratchで作るナビシステム
+![Geo Scratchで作ったナビシステム](img/Stretch3_GeoScratch_Navi.png)
+
+何らかの方法で、GPSのデータを取得できる場合、簡単にナビシステムを構築することが可能です。
+上の図のコードでは、経度と緯度がそれぞれ変数`Lon`と`Lat`に入っていることを仮定しています。
+この状態で、[地図を経度(Lon)緯度(Lat)ズーム(16)で表示]ブロックを使うことで、その場所に地図を移動させています。
+
+例えば、[SPRESENSE](https://developer.sony.com/ja/spresense)というマイコンのGPS機能を使って、このようなシステムを作った例は[SpreM5ScratchSense: SPRESENSE x M5Stack x Scratch](https://elchika.com/article/9d2719d9-e9b2-4708-b831-715da51c8d7c/)として紹介していますので、興味のある方はご覧ください。
 
 ## TeachableMachineに関する拡張機能
 ### TMpose2Scratch
